@@ -1,0 +1,53 @@
+{
+  "name": "albyhub-admin-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for node-admin operations on an Alby Hub instance via its HTTP API. Lets agents read node info, balances, channels, and sub-wallet apps; sub-wallet provisioning + channel ops gated behind safety knobs. A generic proxy_request tool covers any endpoint the typed wrappers don't yet expose. Pairs with nwc-mcp (NIP-47 wallet ops) — admin handles what NWC can't reach.",
+  "type": "module",
+  "license": "MIT",
+  "author": "LLMOps.Pro <https://njump.me/npub1hdg932jvwc3jdvkqywgqv0ue4nn60exrf92asy8mtazt3hjg7d2s2yw0nw>",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "alby",
+    "alby-hub",
+    "lightning",
+    "bitcoin",
+    "lnd",
+    "node-admin",
+    "claude",
+    "ai-agent",
+    "llm"
+  ],
+  "bin": {
+    "albyhub-admin-mcp": "dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --target node20 --clean --shims",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
