@@ -1,0 +1,40 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.llmops-pro/albyhub-admin-mcp",
+  "description": "Node-admin operations on an Alby Hub Lightning node via its HTTP API: node info, balances, channels, sub-wallet apps \u2014 write operations gated behind safety knobs, plus a generic proxy_request escape hatch.",
+  "repository": {
+    "url": "https://github.com/llmops-pro/albyhub-admin-mcp",
+    "source": "github"
+  },
+  "version": "0.1.2",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "albyhub-admin-mcp",
+      "version": "0.1.2",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ALBYHUB_URL",
+          "description": "Base URL of the Alby Hub instance",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "ALBYHUB_TOKEN",
+          "description": "Alby Hub API bearer token",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "ALBYHUB_READ_ONLY",
+          "description": "Set true to block all write operations (recommended for first-time setup)",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

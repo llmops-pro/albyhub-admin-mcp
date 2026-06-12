@@ -1,7 +1,8 @@
 {
   "name": "albyhub-admin-mcp",
-  "version": "0.1.1",
-  "description": "MCP server for node-admin operations on an Alby Hub instance via its HTTP API. Lets agents read node info, balances, channels, and sub-wallet apps; sub-wallet provisioning + channel ops gated behind safety knobs. A generic proxy_request tool covers any endpoint the typed wrappers don't yet expose. Pairs with nwc-mcp (NIP-47 wallet ops) — admin handles what NWC can't reach.",
+  "version": "0.1.2",
+  "mcpName": "io.github.llmops-pro/albyhub-admin-mcp",
+  "description": "MCP server for node-admin operations on an Alby Hub instance via its HTTP API. Lets agents read node info, balances, channels, and sub-wallet apps; sub-wallet provisioning + channel ops gated behind safety knobs. A generic proxy_request tool covers any endpoint the typed wrappers don't yet expose. Pairs with nwc-mcp (NIP-47 wallet ops) \u2014 admin handles what NWC can't reach.",
   "type": "module",
   "license": "MIT",
   "author": "LLMOps.Pro <https://njump.me/npub1hdg932jvwc3jdvkqywgqv0ue4nn60exrf92asy8mtazt3hjg7d2s2yw0nw>",
