@@ -35,7 +35,7 @@ async function main(): Promise<void> {
   const hub = new HubClient(config);
 
   const server = new McpServer(
-    { name: "albyhub-admin-mcp", version: "0.1.0" },
+    { name: "albyhub-admin-mcp", version: "0.1.1" },
     { capabilities: { tools: {} } },
   );
 
